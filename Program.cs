@@ -10,8 +10,18 @@ namespace CS_Practice
             //program.Intro();
             //program.Input();
             //program.BasicCalculator();
-            program.MadLib();
-            
+            //program.MadLib();
+            //program.Arrays();
+            //SayHi("Mike", 33);
+            //SayHi("John", 56);
+            //SayHi("Tom", 12);
+            //int cubedNumber = Cube(5);
+            //Console.WriteLine(cubedNumber);
+            //program.If();
+            //Console.WriteLine(GetMax(20, 10, 40));
+            program.BetterCalculator();
+
+            Console.ReadLine();
         }
         public void Intro()
         {
@@ -82,8 +92,6 @@ namespace CS_Practice
             Console.WriteLine(Math.Max(4, 90));
             Console.WriteLine(Math.Min(4, 90));
             Console.WriteLine(Math.Round(4.6));
-
-            Console.ReadLine();
         }
 
         public void Input()
@@ -93,8 +101,6 @@ namespace CS_Practice
             Console.Write("Enter your age: ");
             string age = Console.ReadLine();
             Console.WriteLine("Hello " + name + " you are " + age);
-
-            Console.ReadLine();
         }
 
         public void BasicCalculator()
@@ -121,6 +127,100 @@ namespace CS_Practice
             Console.WriteLine("Roses are " + color);
             Console.WriteLine(pluralNoun + " are blue");
             Console.WriteLine("I Love " + celebrity);
+        }
+
+        public void Arrays()
+        {
+            int[] luckyNumbers = {4, 8, 15, 16, 23, 42};
+            string[] friends = new string[5];
+            friends[0] = "Jim";
+            friends[1] = "Kelly";
+
+            luckyNumbers[1] = 900;
+            Console.WriteLine(luckyNumbers[1]);
+        }
+
+        static void SayHi(string name, int age)
+        {
+            Console.WriteLine("Hello " + name + " you are " + age);
+        }
+
+        static int Cube(int num)
+        {
+            int result = num * num * num;
+            return result;
+        }
+
+        public void If()
+        {
+            bool isMale = true;
+            bool isTall = true;
+
+            if (isMale && isTall)
+            {
+                Console.WriteLine("You are a tall male");
+            }else if (isMale && !isTall)
+            {
+                Console.WriteLine("You are a short male");
+            }else if (!isMale && isTall)
+            {
+                Console.WriteLine("You are not a male but you are tall");
+            }
+            else
+            {
+                Console.WriteLine("You are not male and not tall");
+            }
+        }
+
+        static int GetMax(int num1, int num2, int num3)
+        {
+            int result;
+
+            if (num1 >= num2 && num1 >= num3)
+            {
+                result = num1;
+            }else if(num2 >= num1 && num2 >= num3)
+            {
+                result = num2;
+            }
+            else
+            {
+                result = num3;
+            }
+
+            return result;
+        }
+
+        public void BetterCalculator()
+        {
+            Console.Write("Enter a number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter an operator: ");
+            string op = Console.ReadLine();
+
+            Console.Write("Enter a number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "+")
+            {
+                Console.WriteLine(num1 + num2);
+            }else if(op == "-")
+            {
+                Console.WriteLine(num1 - num2);
+            }
+            else if (op == "/")
+            {
+                Console.WriteLine(num1 / num2);
+            }
+            else if (op == "*")
+            {
+                Console.WriteLine(num1 * num2);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator");
+            }
         }
     }
 }
