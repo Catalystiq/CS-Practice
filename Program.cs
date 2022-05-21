@@ -7,7 +7,10 @@ namespace CS_Practice
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.Intro();
+            //program.Intro();
+            //program.Input();
+            //program.BasicCalculator();
+            program.MadLib();
             
         }
         public void Intro()
@@ -80,7 +83,44 @@ namespace CS_Practice
             Console.WriteLine(Math.Min(4, 90));
             Console.WriteLine(Math.Round(4.6));
 
-            //Console.ReadLine();
+            Console.ReadLine();
+        }
+
+        public void Input()
+        {
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            string age = Console.ReadLine();
+            Console.WriteLine("Hello " + name + " you are " + age);
+
+            Console.ReadLine();
+        }
+
+        public void BasicCalculator()
+        {
+            Console.Write("Enter a number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter another number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(num1 + num2);
+        }
+
+        public void MadLib()
+        {
+            string color, pluralNoun, celebrity;
+
+            Console.Write("Enter a color: ");
+            color = Console.ReadLine();
+            Console.Write("Enter a plural noun: ");
+            pluralNoun = Console.ReadLine();
+            Console.Write("Enter a celebrity: ");
+            celebrity = Console.ReadLine();
+
+            Console.WriteLine("Roses are " + color);
+            Console.WriteLine(pluralNoun + " are blue");
+            Console.WriteLine("I Love " + celebrity);
         }
     }
 }
