@@ -45,8 +45,40 @@ namespace CS_Practice
             Console.WriteLine("");
 
             //Strings
-            string text = "Giraffe \n \" Academy" + "is cool";
+            string text = "Giraffe \n \" Academy" + " is cool";
             Console.WriteLine(text.Length);
+            Console.WriteLine(text.ToUpper());
+            Console.WriteLine(text.ToLower());
+            Console.WriteLine(text.Contains("Academy"));
+            Console.WriteLine(text.Contains("Academies"));
+            Console.WriteLine(text[0]);
+            Console.WriteLine(text[2]);
+            Console.WriteLine(text.IndexOf("Academy"));
+            Console.WriteLine(text.IndexOf("f"));
+            Console.WriteLine(text.IndexOf("z"));
+            Console.WriteLine(text.Substring(12, 3));
+            Console.WriteLine(text.Substring(text.IndexOf("Academy")));
+            Console.WriteLine("");
+
+            //Numbers
+            Console.WriteLine(40);
+            Console.WriteLine(-5.783);
+            Console.WriteLine(5 + 8);
+            Console.WriteLine(5 % 2);
+            Console.WriteLine(4 + 2 * 3);
+            Console.WriteLine((4 + 2) * 3);
+
+            int num = 6;
+            num++;
+            num--;
+            Console.WriteLine(num);
+
+            Console.WriteLine(Math.Abs(-40));
+            Console.WriteLine(Math.Pow(3, 2));
+            Console.WriteLine(Math.Sqrt(36));
+            Console.WriteLine(Math.Max(4, 90));
+            Console.WriteLine(Math.Min(4, 90));
+            Console.WriteLine(Math.Round(4.6));
 
             //Console.ReadLine();
         }
